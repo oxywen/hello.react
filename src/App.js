@@ -1,25 +1,46 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import WForm from './components/form/WForm';
+import WFormItem from './components/form/WFormItem';
+import WButton from './components/button/WButton'
+import WInput from './components/input/WInput'
 
 function App() {
+
+  const onFinish = () => {
+    console.log("ok")
+  }
+
+  const onFinishFailed = () => {
+    console.log("failed")
+  }
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <WForm
+      onFinish={onFinish}
+      onFinishFailed={onFinishFailed}
+    >
+      <WFormItem
+        label="账户"
+        name="account"
+        rules={[{ required: true, message: 'Please input your account!' }]}
+      >
+        <WInput />
+      </WFormItem>
+      <WFormItem
+        label="密码"
+        name="password"
+        rules={[{ required: true, message: 'Please input your password!' }]}
+      >
+        <WInput type="password" />
+      </WFormItem>
+      <WFormItem>
+        <WButton type="submit">登录</WButton>
+      </WFormItem>
+    </WForm>
   );
+
 }
 
 export default App;
