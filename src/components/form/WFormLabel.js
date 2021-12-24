@@ -10,8 +10,8 @@ class WFormLabel extends React.Component {
             return null;
         }
         return (
-            <div>
-                <label>{this.props.label}</label>
+            <div className="w-form-item-label">
+                <label htmlFor={this.props.for}>{this.props.label}</label>
             </div>
         )
     }

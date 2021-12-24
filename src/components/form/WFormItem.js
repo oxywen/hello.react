@@ -10,7 +10,7 @@ class WFormItem extends React.Component{
     render() {
         return (
             <div className="w-form-item">
-                <WFormLabel label={this.props.label}/>
+                <WFormLabel for={this.props.name} label={this.props.label}/>
                 <WFormInput name = {this.props.name}>
                     {this.props.children}
                 </WFormInput>

@@ -7,7 +7,7 @@ class WFormInput extends React.Component{
 
     render(){
         return (
-            <div className="w-form-input">{this.props.children}</div>
+            <div className="w-form-item-input">{this.props.children}</div>
         );
     }
 

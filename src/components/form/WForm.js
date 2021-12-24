@@ -1,4 +1,5 @@
 import React from "react";
+import './style/Index.less'
 
 class WForm extends React.Component {
     constructor(props) {
@@ -12,7 +13,7 @@ class WForm extends React.Component {
 
     render() {
         return (
-            <form onSubmit={this.onSubmit}>
+            <form className="w-form w-col-form" onSubmit={this.onSubmit}>
                 {this.props.children}
             </form>
         );
