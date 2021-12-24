@@ -1,6 +1,6 @@
 import React from "react";
 
-class WFormLabel extends React.Component {
+class WInternalFormLabel extends React.Component {
     constructor(props) {
         super(props);
     }
@@ -18,4 +18,4 @@ class WFormLabel extends React.Component {
 
 }
 
-export default WFormLabel;
+export default WInternalFormLabel;

@@ -5,9 +5,10 @@ class WFormInput extends React.Component{
         super(props);
     }
 
-    render(){
+    render() {
+        const clazz = this.props.name ? "w-form-item-input" : "w-form-item-control"
         return (
-            <div className="w-form-item-input">{this.props.children}</div>
+            <div className={clazz}>{this.props.children}</div>
         );
     }
 

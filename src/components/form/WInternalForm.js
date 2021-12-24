@@ -1,7 +1,7 @@
 import React from "react";
-import './style/Index.less'
+import './style/index.less'
 
-class WForm extends React.Component {
+class WInternalForm extends React.Component {
     constructor(props) {
         super(props);
     }
@@ -20,4 +20,4 @@ class WForm extends React.Component {
     }
 }
 
-export default WForm;
+export default WInternalForm;
